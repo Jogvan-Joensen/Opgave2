@@ -1,0 +1,33 @@
+﻿@model Fall2015.Models.Student
+
+
+
+<div class="blockcenter gray-round">
+
+    <div class="form-group">
+        <label>Firstname</label>
+
+        <!-- Either the html helper -->
+        @Html.TextBoxFor(a => a.Firstname, new { @class = "form-control" })
+
+        <!-- Or you can write the html, remember the name attribute so modelbinding works.. -->
+        <!--<input type="text" name="firstname" class="form-control"/>-->
+    </div>
+
+    <div class="form-group">
+        <label>Lastname</label>
+        @Html.TextBoxFor(a => a.Lastname, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(a => a.Email, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Mobile Phone</label>
+        @Html.TextBoxFor(a => a.MobilePhone, new { @class = "form-control" })
+    </div>
+</div>
+
+<input type="submit" value="Save" class="btn btn-primary" id="saveButton" />
